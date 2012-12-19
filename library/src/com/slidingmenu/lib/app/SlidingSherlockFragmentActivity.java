@@ -39,7 +39,9 @@ public class SlidingSherlockFragmentActivity extends SherlockFragmentActivity im
         View v = super.findViewById(id);
         if (v != null)
             return v;
-        return mHelper.findViewById(id);
+        if(mHelper != null)
+            return mHelper.findViewById(id);
+        else return null;
     }
 
     /* (non-Javadoc)
